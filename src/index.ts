@@ -1,12 +1,16 @@
-import { GitHubService } from './services/github/githubService';
+// src/index.ts
+import { GitHubService } from './services/github';
 
 async function main() {
   const githubService = new GitHubService();
 
   try {
-    const repos = await githubService.listRepositories();
-    console.log('Accessible repositories:', repos.map(repo => repo.full_name));
-    // TODO: Implement repository scanning and task assignment logic
+    // Your main logic here
+    const repos = await githubService.repositories.listRepositories();
+    console.log('Accessible repositories:', repos.map((repo: { full_name: string }) => repo.full_name));
+
+    // More code...
+
   } catch (error) {
     console.error('Error:', error);
   }
