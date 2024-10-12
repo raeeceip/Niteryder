@@ -31,7 +31,8 @@ const requiredEnvVars = [
   'SENTRY_TOKEN',
   'SENTRY_ORG',
   'MAIN_REPO_OWNER',
-  'MAIN_REPO_NAME'
+  'MAIN_REPO_NAME',
+  'GITHUB_AZURE_AI_TOKEN'
 ];
 
 requiredEnvVars.forEach(varName => {
